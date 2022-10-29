@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+h2{
+  padding: 20px;
+}
+.contactme{
+  text-align: center;
+  color: #3c5148;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+
+.bd-grid{
+  width: 500px;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  margin-left: 400px;
+}
+
+.contact__input{
+  width: 100%;
+  padding: 1rem;
+  border-radius: .5rem;
+  border: 2px solid #3c5148;
+  outline: none;
+  margin-bottom: 40px;
+}
+.contact__button{
+  display: block;
+  border: none;
+  width: 100px;
+  outline: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.button{
+  background-color: #3c5148;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 15px 20px;
+}
