@@ -4,6 +4,15 @@
   box-sizing: border-box;
   font-family: "Times New Roman", Times, serif;
 }
+#contact{
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  background: #FFFDE7;
+  margin-bottom: 0;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
 h2{
   padding: 20px;
 }
@@ -18,7 +27,7 @@ h2{
   width: 500px;
   grid-template-columns: 100%;
   grid-column-gap: 2rem;
-  margin-left: 400px;
+  margin: auto;
 }
 
 .contact__input{

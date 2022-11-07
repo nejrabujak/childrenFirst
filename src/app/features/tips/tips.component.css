@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-family: "Times New Roman", Times, serif;
 }
+#work{
+  background: #FFFDE7;
+  margin-bottom: 0;
+}
+
 h2{
   padding: 10px;
   text-align: center;
@@ -17,7 +22,7 @@ h2{
 }
 
 .row {
-  margin: 20px;
+  padding: 20px;
 }
 
 .row:after {
@@ -30,33 +35,33 @@ h2{
   height: 200px;
   transition: 1s;
   cursor: pointer;
-  text-align: justify;
   border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .text{
   display: none;
 }
 
 h3{
-  padding: 70px 20px 20px 20px;
   text-align: center;
+  padding: 15px;
   color: #3c5148;
 }
 
 .card:hover{
+  display: block;
   transform: scale(1.1);
   background: transparent;
   border: 5px solid #3c5148;
-  height: 500px;
-}
-
-.card:hover .h3{
-  text-align: center;
+  height: auto;
 }
 
 .card:hover .text{
   display: block;
-  padding: 10px;
+  padding: 10px 20px 10px 20px;
   font-size: 15px;
   color: #3c5148;
+  text-align: justify;
 }

@@ -4,6 +4,7 @@
   font-weight:bold;
   margin: 0;
   padding: 0;
+  background: #FFFDE7;
 }
 
 a{
@@ -49,7 +50,7 @@ nav ul li a:hover:after{
   width: 100%;
 }
 
-.logo{
+.title{
   color:#3c5148;
   font-size:50px;
   letter-spacing:1px;
@@ -64,4 +65,12 @@ nav ul li a:hover:after{
   height: 60px;
   width: 65px;
   margin-bottom:25px;
+}
+
+.logo{
+  display: flex;
+}
+
+@media(max-width: 500px){
+
 }

@@ -5,6 +5,7 @@
   padding:0;
   margin:0;
   box-sizing:border-box;
+  background: #FFFDE7;
 }
 .row{
   display: flex;
@@ -38,3 +39,11 @@ a{
   color: #3c5148;
 }
 
+@media (max-width: 500px) {
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+}

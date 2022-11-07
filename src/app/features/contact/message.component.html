@@ -1,0 +1,28 @@
+<form [formGroup]="form" (ngSubmit)="submit()" action="" class="contact__form">
+  <section class="contact section" id="contact">
+  <div class="contactme">
+  <h2 class="section-title">Napišite mi poruku</h2>
+   <p>TELEFON: +387 60 341 7565</p>
+    <p>E-MAIL: diplomskirad@gmail.com  ili:</p> <br>
+  </div>
+
+  <div class="contact__container bd-grid form-group">
+      <input type="name" placeholder="Vaše ime" class="contact__input" id="name"
+             [formControlName]="messageProperty.name"  name="name">
+      <input type="text" placeholder="Vaše email" class="contact__input" id="text"
+             [formControlName]="messageProperty.email"  name="email">
+
+      <input type="text" placeholder="Ostavite poruku"
+             class="contact__input" id="note"
+             [formControlName]="messageProperty.note"  name="note">
+
+      <div class="form-group">
+        <button (click)="submit()" class="contact__button button" >Enter</button>
+      </div>
+  </div>
+</section>
+</form>
+
+
+
+

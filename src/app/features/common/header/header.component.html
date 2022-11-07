@@ -1,23 +1,26 @@
 <header>
   <div class="hero">
     <nav>
+      <div class="logo">
       <img src="https://i.imgur.com/PkpcThl.jpg" class="logoimg" alt="LogoImg">
-      <h2 class="logo"><span class="style1" style="color: darkgray">Ch</span>
+      <h2 class="title"><span class="style1" style="color: darkgray">Ch</span>
                        <span class="style1" style="color: green">il</span>
                        <span class="style1" style="color: orange">dr</span>
                        <span class="style1" style="color: red">en</span>
                        <span class="style1" style="color: blue">Fir</span>
                        <span class="style1" style="color: #ffe319 ">st</span></h2>
+      </div>
+      <div>
       <ul>
         <li><a routerLink="" routerLinkActive="active"><span itemprop="name">Početna</span></a></li>
         <li><a routerLink="/children" routerLinkActive="active"><span itemprop="name">O djeci</span></a></li>
-        <li><a><span itemprop="name">Ishrana</span></a></li>
         <li><a routerLink="/tips" routerLinkActive="active"><span itemprop="name">Savjeti</span></a></li>
         <li><a routerLink="/exercises" routerLinkActive="active"><span itemprop="name">Vježbe</span></a></li>
         <li><a routerLink="/sport" routerLinkActive="active"><span itemprop="name">Sport</span></a></li>
         <li><a routerLink="/about" routerLinkActive="active"><span itemprop="name">O meni</span></a></li>
-        <li><a routerLink="/contact" routerLinkActive="active"><span itemprop="name">Kontakt</span></a></li>
+        <li><a [routerLink]="[route.MESSAGES + route.EMPTY]"><span itemprop="name">Kontakt</span></a></li>
       </ul>
+      </div>
     </nav>
   </div>
 </header>

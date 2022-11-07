@@ -3,10 +3,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Times New Roman", Times, serif;
+  background: #FFFDE7;
 }
 .section{
   padding-top: 3rem;
   padding-bottom: 2rem;
+  display: inline-list-item;
+  align-items: center;
+  justify-content: center;
 }
 .section-title{
   position: relative;
@@ -23,8 +27,8 @@
   width: 800px;
   height: 650px;
   border: 3px solid #3c5148;
-  margin-left: 250px;
   box-shadow: rgba(0, 0, 0, 0.35) 10px 30px 50px;
+  margin: auto;
 }
 
 .about__text{
@@ -36,6 +40,7 @@
 }
 .text1{
   padding-top: 50px;
+  border-radius: 30px;
 }
 a{
   text-decoration: none;
