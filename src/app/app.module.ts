@@ -28,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MessageContainerComponent} from './containers/message/message-container.component';
 import {MessageService} from './services/message.service';
 import {ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatButtonModule,
     MatDialogModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   entryComponents: [
     DialogDrawComponent,

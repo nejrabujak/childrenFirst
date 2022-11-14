@@ -7,7 +7,7 @@ import {environment} from '../../environments/environment';
 @Injectable()
 export class MessageService {
 
-  private readonly baseUrl: string = `${environment.backendUrl}/products`;
+  private readonly baseUrl: string = `${environment.backendUrl}/message`;
 
   constructor(private http: HttpClient) {
   }

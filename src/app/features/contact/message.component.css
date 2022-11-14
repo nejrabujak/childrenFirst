@@ -38,6 +38,10 @@ h2{
   outline: none;
   margin-bottom: 40px;
 }
+#note{
+  height: 200px;
+  text-align: start;
+}
 .contact__button{
   display: block;
   border: none;

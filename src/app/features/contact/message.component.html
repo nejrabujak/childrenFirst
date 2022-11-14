@@ -12,11 +12,11 @@
       <input type="text" placeholder="Vaše email" class="contact__input" id="text"
              [formControlName]="messageProperty.email"  name="email">
 
-      <input type="text" placeholder="Ostavite poruku"
-             class="contact__input" id="note"
-             [formControlName]="messageProperty.note"  name="note">
+    <textarea name="note" id="note" placeholder="Ostavite poruku"
+              cols="0" rows="10" class="contact__input"
+              [formControlName]="messageProperty.note"></textarea>
 
-      <div class="form-group">
+    <div class="form-group">
         <button (click)="submit()" class="contact__button button" >Enter</button>
       </div>
   </div>

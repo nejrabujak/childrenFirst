@@ -18,8 +18,8 @@ export class MessageResolver implements Resolve<Message> {
   ): Observable<Message> | Promise<Message> | Message {
     const id = route.paramMap.get(Route.ID.substring(1));
     const message = this.messageService.getMessage(id!);
-    if(!message) {
-      throw 'Message not found!';
+    if (!message) {
+      throw new Error('Message not found!');
     }
     return message;
   }
