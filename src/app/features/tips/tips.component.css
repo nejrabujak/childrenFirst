@@ -65,3 +65,14 @@ h3{
   color: #3c5148;
   text-align: justify;
 }
+@media (max-width: 600px) {
+  .column {
+    float: none;
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+}

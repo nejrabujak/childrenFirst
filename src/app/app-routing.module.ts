@@ -8,6 +8,7 @@ import { ExercisesComponent } from './features/exercises/exercises.component';
 import { SportComponent } from './features/sport/sport.component';
 import {Route} from './constants/route.constants';
 import {MessageContainerComponent} from './containers/message/message-container.component';
+import {ThankyouComponent} from './features/thankyou/thankyou.component';
 
 const routes: Routes = [
 
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'tips', component: TipsComponent },
   { path: 'children', component: ChildrenComponent },
   { path: 'exercises', component: ExercisesComponent },
-  { path: 'sport', component: SportComponent }
+  { path: 'sport', component: SportComponent },
+  { path: 'thankyou', component: ThankyouComponent }
 ];
 
 @NgModule({

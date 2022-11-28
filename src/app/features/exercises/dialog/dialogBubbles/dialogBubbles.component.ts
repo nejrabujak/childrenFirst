@@ -2,18 +2,18 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dialog',
-  templateUrl: './dialogSwim3.component.html',
-  styleUrls: ['./dialogSwim3.component.css']
+  templateUrl: './dialogBubbles.component.html',
+  styleUrls: ['./dialogBubbles.component.css']
 })
-export class DialogSwim3Component implements OnInit {
+export class DialogBubblesComponent implements OnInit {
 
   constructor() { }
 
-  //  videoUrl = 'https://www.youtube.com/watch?v=Q0y4Rd64j80';
+  //  videoUrl = 'https://www.youtube.com/watch?v=ylnZry9fpKY';
 
   apiLoaded = false;
 
-  videoId = 'Q0y4Rd64j80';
+  videoId = 'ylnZry9fpKY';
 
   // tslint:disable-next-line:typedef
   ngOnInit() {

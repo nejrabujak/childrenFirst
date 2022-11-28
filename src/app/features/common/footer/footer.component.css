@@ -14,11 +14,11 @@ hr{
 }
 
 footer {
+  text-align: center;
   background-color:	#8BCA67;
   width: 100%;
   padding-bottom:30px;
   padding-top: 15px;
-  text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -31,8 +31,8 @@ li {
 }
 .footertext{
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   font-size:15px;
 }
 
@@ -40,8 +40,8 @@ li {
   text-decoration: none;
   color: white;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   font-size:24px;
   letter-spacing:5px;
 }

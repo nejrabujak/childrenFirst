@@ -71,6 +71,11 @@ nav ul li a:hover:after{
   display: flex;
 }
 
-@media(max-width: 500px){
-
+@media(max-width: 600px){
+  nav{
+    display: block;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+  }
 }

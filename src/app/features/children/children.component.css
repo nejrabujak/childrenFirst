@@ -32,6 +32,7 @@
 }
 
 .about__text{
+  border-radius: 25px;
   text-align: center;
   padding: 20px;
   color: #3c5148;
@@ -46,3 +47,22 @@ a{
   text-decoration: none;
   color: #3c5148;
 }
+
+@media (max-width: 600px) {
+  .section-title{
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about__container{
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+

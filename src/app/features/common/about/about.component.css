@@ -44,3 +44,21 @@ margin: auto;
 img{
   border-radius: 100px;
 }
+
+@media (max-width: 600px) {
+  .section-title{
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about__container{
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+
+}

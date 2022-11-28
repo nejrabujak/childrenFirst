@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import {DialogDrawComponent} from './dialog/dialogDraw/dialogDraw.component';
-import {DialogBuildComponent} from './dialog/dialogBuild/dialogBuild.component';
 import {DialogEmotionComponent} from './dialog/dialogEmotion/dialogEmotion.component';
 import {DialogMemoryComponent} from './dialog/dialogMemory/dialogMemory.component';
 import {DialogToysComponent} from './dialog/dialogToys/dialogToys.component';
+import {DialogBubblesComponent} from './dialog/dialogBubbles/dialogBubbles.component';
 import {DialogSwim1Component} from './dialog/dialogSwim1/dialogSwim1.component';
 import {DialogSwim2Component} from './dialog/dialogSwim2/dialogSwim2.component';
 import {DialogSwim3Component} from './dialog/dialogSwim3/dialogSwim3.component';
@@ -26,17 +26,6 @@ export class ExercisesComponent implements OnInit{
   // tslint:disable-next-line:typedef
   showDialogDraw(){
     const dialogRef = this.dialog.open(DialogDrawComponent, {
-      width: '800px',
-      height: '500px'
-    });
-    setTimeout(() => {
-      dialogRef.close();
-    }, 10000000000);
-  }
-
-  // tslint:disable-next-line:typedef
-  showDialogBuild(){
-    const dialogRef = this.dialog.open(DialogBuildComponent, {
       width: '800px',
       height: '500px'
     });
@@ -70,6 +59,17 @@ export class ExercisesComponent implements OnInit{
   // tslint:disable-next-line:typedef
   showDialogToys(){
     const dialogRef = this.dialog.open(DialogToysComponent, {
+      width: '800px',
+      height: '500px'
+    });
+    setTimeout(() => {
+      dialogRef.close();
+    }, 10000000000);
+  }
+
+  // tslint:disable-next-line:typedef
+  showDialogBubbles(){
+    const dialogRef = this.dialog.open(DialogBubblesComponent, {
       width: '800px',
       height: '500px'
     });
