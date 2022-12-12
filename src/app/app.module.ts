@@ -31,7 +31,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 
+import { CardService } from './services/card.service';
 import { MessageService } from './services/message.service';
+import { PageService } from './services/page.service';
+import {PageUuidService} from './services/page.uuid.service';
 
 @NgModule({
   declarations: [
@@ -77,9 +80,13 @@ import { MessageService } from './services/message.service';
     DialogSwim3Component,
     DialogSwim4Component,
     DialogToysComponent
+    // ,ExitComponent
   ],
   providers: [
-    MessageService
+    CardService,
+    MessageService,
+    PageService,
+    PageUuidService
   ],
   bootstrap: [AppComponent]
 })

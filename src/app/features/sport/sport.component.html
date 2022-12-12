@@ -1,11 +1,11 @@
-  <section id="work">
+<section id="work">
     <h2 class="section-title">Sportovi u BiH za vaše dijete</h2>
 
     <div id="section-body">
     <div class="row">
       <div class="column ">
-        <div class="card swimming">
-          <img src="https://i.imgur.com/Qm0aCm0.jpg">
+        <div class="card swimming" (mouseenter)="swim()" (mouseleave)="swimExit()">
+          <img src="https://i.imgur.com/Qm0aCm0.jpg" alt="swim">
           <p class="text"> Plivanje, osim što doprinosi zdravlju i razvoju psihomotoričkih vještina,
             ono je posrednik i u socijalizaciji. Plivački klub “Spid” je prvi i jedini plivački klub za
             djecu sa invaliditetom i poteškoćama u razvoju. U klubu se nalaze djeca sa različitim poteškoćama
@@ -18,8 +18,8 @@
       </div>
 
       <div class="column">
-        <div class="card skiing">
-          <img src="https://i.imgur.com/cdAn8hB.jpg">
+        <div class="card skiing" (mouseenter)="skiing()" (mouseleave)="skiingExit()">
+          <img src="https://i.imgur.com/cdAn8hB.jpg" alt="ski">
           <p class="text"> Plivački klub “Spid” osim što se bavi školom plivanja, u zimskom periodu kada su djeca
             na raspustu, organizuje i školu skijanja za djecu sa različitim poteškoćama i invaliditetima. Vješti
             tim trenera djecu uče kako da samostalno skijaju i uživaju u ljepotama planine prekrivenom snijegom.
@@ -31,8 +31,8 @@
 
     <div class="row">
       <div class="column">
-        <div class="card football">
-          <img src="https://i.imgur.com/WqkOVlY.jpg">
+        <div class="card football" (mouseenter)="football()" (mouseleave)="footballExit()">
+          <img src="https://i.imgur.com/WqkOVlY.jpg" alt="football">
           <p class="text"> Fudbalski klub "Respekt" je prva i jedina organizacija ovog tipa u svijetu, koja je besplatna za svu djecu
             i mlade, i u kojoj, rame uz rame, na treningu i na takmičenjima, uz tipičnu djecu, treniraju djeca sa
             poteškoćama u razvoju, Romi, djeca bez roditeljskog staranja, djeca žrtve nasilja. Respekt jedna je od
@@ -44,8 +44,8 @@
       </div>
 
       <div class="column">
-        <div class="card athletics">
-          <img src="https://i.imgur.com/Ut8E0VY.jpg">
+        <div class="card athletics" (mouseenter)="athletics()" (mouseleave)="athleticsExit()">
+          <img src="https://i.imgur.com/Ut8E0VY.jpg" alt="athletics">
           <p class="text">Još jedan od sportova kojim se vaše dijete može baviti je atletika. Atletski klub osoba sa
             invaliditetom "Novi Grad Sarajevo" je jedan od tih klubova. Oni podržavaju  i nastoje razviti atletiku kao
             zaseban sport  kod osoba sa invaliditetom u Bosni i Hercegovini. Bave se organizacijom škole atletike i
@@ -57,8 +57,8 @@
 
       <div class="row">
         <div class="column ">
-          <div class="card gymnastics">
-            <img src="https://i.imgur.com/3vs6oNA.jpg">
+          <div class="card gymnastics" (mouseenter)="gymnastics()" (mouseleave)="gymnasticsExit()">
+            <img src="https://i.imgur.com/3vs6oNA.jpg" alt="gymnastics">
             <p class="text">Jedan od klubova u Bosni i Hercegovini koji je uspješan i predan u svom radu je Klub ritmičke
               gimnastike "Visoko". Oni nude djeci pozitivno okruženje i gimnastičke treninge za savladanje novih vještina.
               Jedna od njihovih članica je i djevojčica koja je rođena bez donjeg dijela lijeve ruke. Uprkos tome, djevojčica
@@ -68,8 +68,8 @@
         </div>
 
         <div class="column">
-          <div class="card voleyball">
-            <img src="https://i.imgur.com/1u1g5Tq.jpg">
+          <div class="card voleyball" (mouseenter)="volleyball()" (mouseleave)="volleyballExit()">
+            <img src="https://i.imgur.com/1u1g5Tq.jpg" alt="volleball">
             <p class="text">Još jedan spori kojim se Vaše dijete može baviti je odbojka. Klub sjedeće odbojke "Bosna", Zenica, je
               klub koji za cilj ima resocijalizaciju  invalida putem sporta te popularizacijeu moralnih vrijednosti koje
               se stiću kroz sjedeću odbojku. Klub pomaže u razvijanju kako ličnih tako i društvenih vrijednosti. Pored

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import {DialogDrawComponent} from './dialog/dialogDraw/dialogDraw.component';
 import {DialogEmotionComponent} from './dialog/dialogEmotion/dialogEmotion.component';
@@ -9,6 +9,13 @@ import {DialogSwim1Component} from './dialog/dialogSwim1/dialogSwim1.component';
 import {DialogSwim2Component} from './dialog/dialogSwim2/dialogSwim2.component';
 import {DialogSwim3Component} from './dialog/dialogSwim3/dialogSwim3.component';
 import {DialogSwim4Component} from './dialog/dialogSwim4/dialogSwim4.component';
+import {Router} from '@angular/router';
+import {PageService} from '../../services/page.service';
+import {Page} from '../../models/page';
+import {Route} from '../../constants/route.constants';
+import {PageProperty} from '../../models/PageProperty';
+import {PageUuidService} from '../../services/page.uuid.service';
+import {Subscription} from 'rxjs';
 
 
 @Component({
@@ -16,11 +23,38 @@ import {DialogSwim4Component} from './dialog/dialogSwim4/dialogSwim4.component';
   templateUrl: './exercises.component.html',
   styleUrls: ['./exercises.component.css']
 })
-export class ExercisesComponent implements OnInit{
-  constructor(public dialog: MatDialog) { }
+export class ExercisesComponent implements OnInit, OnDestroy{
+  private sub = new Subscription();
+  constructor(
+    public dialog: MatDialog,
+    private router: Router,
+    private pageService: PageService,
+    private pageUuidService: PageUuidService
+  ) { }
 
   // tslint:disable-next-line:typedef
-  ngOnInit() {
+  public getPage(){
+    return 'exercises';
+  }
+  // tslint:disable-next-line:typedef
+  public getEnter(){
+    return 'enter';
+  }
+
+  ngOnInit(): void{
+    console.log(this.pageUuidService.getDeviceId());
+    console.log(this.getPage());
+    this.savePage({
+      [PageProperty.uuid]: this.pageUuidService.getDeviceId(),
+      [PageProperty.page]: this.getPage(),
+      [PageProperty.enterexit]: this.getEnter()
+    });
+  }
+
+  savePage(page: Page): void {
+    this.pageService.create(page).subscribe(() => {
+      this.router.navigate([Route.EXERCISES]);
+    });
   }
 
   // tslint:disable-next-line:typedef
@@ -120,5 +154,8 @@ export class ExercisesComponent implements OnInit{
     setTimeout(() => {
       dialogRef.close();
     }, 10000000000);
+  }
+  ngOnDestroy(): void{
+    this.sub.unsubscribe();
   }
 }
