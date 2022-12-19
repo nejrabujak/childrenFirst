@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {PageService} from '../../services/page.service';
-import {Page} from '../../models/page';
+import {Page} from '../../models/page.model';
 import {Route} from '../../constants/route.constants';
-import {PageProperty} from '../../models/PageProperty';
+import {PageProperty} from '../../models/page-property.enum';
 import {PageUuidService} from '../../services/page.uuid.service';
 import {Subscription} from 'rxjs';
 import {CardProperty} from '../../models/CardProperty';
@@ -51,7 +51,7 @@ export class TipsComponent implements OnInit, OnDestroy{
   }
 
   savePage(page: Page): void {
-    this.pageService.create(page).subscribe(() => {
+    this.pageService.enter(page).subscribe(() => {
       this.router.navigate([Route.TIPS]);
     });
   }

@@ -2,8 +2,8 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {PageService} from '../../../services/page.service';
 import {PageUuidService} from '../../../services/page.uuid.service';
-import {PageProperty} from '../../../models/PageProperty';
-import {Page} from '../../../models/page';
+import {PageProperty} from '../../../models/page-property.enum';
+import {Page} from '../../../models/page.model';
 import {Route} from '../../../constants/route.constants';
 import {Subscription} from 'rxjs';
 
@@ -44,7 +44,7 @@ export class AboutComponent implements OnInit, OnDestroy{
   }
 
   savePage(page: Page): void {
-    this.pageService.create(page).subscribe(() => {
+    this.pageService.enter(page).subscribe(() => {
       this.router.navigate([Route.ABOUT]);
     });
   }
