@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
 import {Observable} from 'rxjs';
-import {Message} from '../models/message';
+import {Message} from '../models/message.model';
 import {MessageService} from '../services/message.service';
 import {Route} from '../constants/route.constants';
 
@@ -9,8 +9,7 @@ import {Route} from '../constants/route.constants';
 @Injectable()
 export class MessageResolver implements Resolve<Message> {
 
-  constructor(private messageService: MessageService) {
-  }
+  constructor(private messageService: MessageService) { }
 
   resolve(
     route: ActivatedRouteSnapshot,
@@ -23,5 +22,4 @@ export class MessageResolver implements Resolve<Message> {
     }
     return message;
   }
-
 }

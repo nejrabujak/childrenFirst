@@ -1,56 +1,31 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {PageService} from '../../services/page.service';
-import {Page} from '../../models/page.model';
 import {Route} from '../../constants/route.constants';
-import {PageProperty} from '../../models/page-property.enum';
-import {PageUuidService} from '../../services/page.uuid.service';
-import {Subscription} from 'rxjs';
-
+import {PageName} from '../../models/page-name.enum';
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
-export class HomepageComponent implements OnInit, OnDestroy{
-  private sub = new Subscription();
+export class HomepageComponent implements OnInit{
 
   constructor(
     private router: Router,
     private pageService: PageService,
-    private pageUuidService: PageUuidService
-  ) {
-  }
+  ) { }
 
-  // tslint:disable-next-line:typedef
-  public getPage(){
-    return 'homepage';
+  ngOnInit(): void {
+    this.enterPage();
   }
-  // tslint:disable-next-line:typedef
-  public getEnter(){
-    return 'enter';
-  }
-
-  // tslint:disable-next-line:typedef
-  ngOnInit(): void{
-    console.log(this.pageUuidService.getDeviceId());
-    console.log(this.getPage());
-    this.savePage({
-      [PageProperty.uuid]: this.pageUuidService.getDeviceId(),
-      [PageProperty.page]: this.getPage(),
-      [PageProperty.enterexit]: this.getEnter()
-    });
-    this.sub = new Subscription();
-  }
-
-  savePage(page: Page): void {
-    this.pageService.enter(page).subscribe(() => {
-      this.router.navigate([Route.EMPTY]);
+  private enterPage(): void {
+    this.pageService.enter(PageName.homepage).subscribe(() => {
+      this.navigateHome();
     });
   }
-  ngOnDestroy(): void{
-    this.sub.unsubscribe();
+
+  private navigateHome(): void {
+    this.router.navigate([Route.EMPTY]);
   }
 }
-

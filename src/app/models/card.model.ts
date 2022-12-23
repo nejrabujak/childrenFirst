@@ -1,4 +1,4 @@
-import {CardProperty} from './CardProperty';
+import {CardProperty} from './card-property.enum';
 
 export class Card {
   [CardProperty.uuid]: string;

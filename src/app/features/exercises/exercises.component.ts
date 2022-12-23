@@ -1,5 +1,5 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import {Component, OnInit} from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
 import {DialogDrawComponent} from './dialog/dialogDraw/dialogDraw.component';
 import {DialogEmotionComponent} from './dialog/dialogEmotion/dialogEmotion.component';
 import {DialogMemoryComponent} from './dialog/dialogMemory/dialogMemory.component';
@@ -11,11 +11,8 @@ import {DialogSwim3Component} from './dialog/dialogSwim3/dialogSwim3.component';
 import {DialogSwim4Component} from './dialog/dialogSwim4/dialogSwim4.component';
 import {Router} from '@angular/router';
 import {PageService} from '../../services/page.service';
-import {Page} from '../../models/page.model';
 import {Route} from '../../constants/route.constants';
-import {PageProperty} from '../../models/page-property.enum';
-import {PageUuidService} from '../../services/page.uuid.service';
-import {Subscription} from 'rxjs';
+import {PageName} from '../../models/page-name.enum';
 
 
 @Component({
@@ -23,139 +20,103 @@ import {Subscription} from 'rxjs';
   templateUrl: './exercises.component.html',
   styleUrls: ['./exercises.component.css']
 })
-export class ExercisesComponent implements OnInit, OnDestroy{
-  private sub = new Subscription();
+export class ExercisesComponent implements OnInit{
+
   constructor(
     public dialog: MatDialog,
     private router: Router,
     private pageService: PageService,
-    private pageUuidService: PageUuidService
   ) { }
 
-  // tslint:disable-next-line:typedef
-  public getPage(){
-    return 'exercises';
-  }
-  // tslint:disable-next-line:typedef
-  public getEnter(){
-    return 'enter';
+  ngOnInit(): void {
+    this.enterPage();
   }
 
-  ngOnInit(): void{
-    console.log(this.pageUuidService.getDeviceId());
-    console.log(this.getPage());
-    this.savePage({
-      [PageProperty.uuid]: this.pageUuidService.getDeviceId(),
-      [PageProperty.page]: this.getPage(),
-      [PageProperty.enterexit]: this.getEnter()
-    });
-  }
-
-  savePage(page: Page): void {
-    this.pageService.enter(page).subscribe(() => {
-      this.router.navigate([Route.EXERCISES]);
-    });
-  }
-
-  // tslint:disable-next-line:typedef
-  showDialogDraw(){
+  showDialogDraw(): void {
     const dialogRef = this.dialog.open(DialogDrawComponent, {
       width: '800px',
       height: '500px'
     });
-    setTimeout(() => {
-      dialogRef.close();
-    }, 10000000000);
+    this.setTime(dialogRef);
   }
 
-  // tslint:disable-next-line:typedef
-  showDialogEmotion(){
+  showDialogEmotion(): void {
     const dialogRef = this.dialog.open(DialogEmotionComponent, {
       width: '800px',
       height: '500px'
     });
-    setTimeout(() => {
-      dialogRef.close();
-    }, 10000000000);
+    this.setTime(dialogRef);
   }
 
-  // tslint:disable-next-line:typedef
-  showDialogMemory(){
+  showDialogMemory(): void {
     const dialogRef = this.dialog.open(DialogMemoryComponent, {
       width: '800px',
       height: '500px'
     });
-    setTimeout(() => {
-      dialogRef.close();
-    }, 10000000000);
+    this.setTime(dialogRef);
   }
 
-  // tslint:disable-next-line:typedef
-  showDialogToys(){
+  showDialogToys(): void {
     const dialogRef = this.dialog.open(DialogToysComponent, {
       width: '800px',
       height: '500px'
     });
-    setTimeout(() => {
-      dialogRef.close();
-    }, 10000000000);
+    this.setTime(dialogRef);
   }
 
-  // tslint:disable-next-line:typedef
-  showDialogBubbles(){
+  showDialogBubbles(): void {
     const dialogRef = this.dialog.open(DialogBubblesComponent, {
       width: '800px',
       height: '500px'
     });
-    setTimeout(() => {
-      dialogRef.close();
-    }, 10000000000);
+    this.setTime(dialogRef);
   }
 
-  // tslint:disable-next-line:typedef
-  showDialogSwim1(){
+  showDialogSwim1(): void {
     const dialogRef = this.dialog.open(DialogSwim1Component, {
       width: '800px',
       height: '500px'
     });
-    setTimeout(() => {
-      dialogRef.close();
-    }, 10000000000);
+    this.setTime(dialogRef);
   }
 
-  // tslint:disable-next-line:typedef
-  showDialogSwim2(){
+  showDialogSwim2(): void {
     const dialogRef = this.dialog.open(DialogSwim2Component, {
       width: '800px',
       height: '500px'
     });
-    setTimeout(() => {
-      dialogRef.close();
-    }, 10000000000);
+    this.setTime(dialogRef);
   }
 
-  // tslint:disable-next-line:typedef
-  showDialogSwim3(){
+  showDialogSwim3(): void {
     const dialogRef = this.dialog.open(DialogSwim3Component, {
       width: '800px',
       height: '500px'
     });
-    setTimeout(() => {
-      dialogRef.close();
-    }, 10000000000);
+    this.setTime(dialogRef);
   }
 
-  // tslint:disable-next-line:typedef
-  showDialogSwim4(){
+  showDialogSwim4(): void {
     const dialogRef = this.dialog.open(DialogSwim4Component, {
       width: '800px',
       height: '500px'
     });
+    this.setTime(dialogRef);
+  }
+
+  private enterPage(): void {
+    this.pageService.enter(PageName.exercises).subscribe(() => {
+      this.navigateExercises();
+    });
+  }
+
+  private navigateExercises(): void {
+    this.router.navigate([Route.EXERCISES]);
+  }
+
+  private setTime(dialogRef): void{
     setTimeout(() => {
       dialogRef.close();
     }, 10000000000);
-  }
-  ngOnDestroy(): void{
-    this.sub.unsubscribe();
   }
 }

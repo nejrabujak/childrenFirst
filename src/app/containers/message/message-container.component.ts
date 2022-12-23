@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Route} from '../../constants/route.constants';
-import {Message} from '../../models/message';
+import {Message} from '../../models/message.model';
 import {MessageService} from '../../services/message.service';
 
 
@@ -19,8 +19,7 @@ export class MessageContainerComponent implements OnInit {
     private messageService: MessageService,
   ) { }
 
-  ngOnInit(): void {  }
-
+  ngOnInit(): void { }
 
   handleSaveMessage(message: Message): void {
     this.messageService.create(message).subscribe(() => {

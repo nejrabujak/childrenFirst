@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Message} from '../models/message';
+import {Message} from '../models/message.model';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../environments/environment';
@@ -9,8 +9,7 @@ export class MessageService {
 
   private readonly baseUrl: string = `${environment.backendUrl}/message`;
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) { }
 
   public create(message: Message): Observable<Message> {
     return this.http.post<Message>(`${this.baseUrl}`, message);

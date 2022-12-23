@@ -1,14 +1,11 @@
-import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
-import {Message} from '../../models/message';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Message} from '../../models/message.model';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import {MessageProperty} from '../../models/MessageProperty';
+import {MessageProperty} from '../../models/message-property.enum';
 import {Router} from '@angular/router';
 import {PageService} from '../../services/page.service';
-import {Page} from '../../models/page.model';
 import {Route} from '../../constants/route.constants';
-import {PageProperty} from '../../models/page-property.enum';
-import {PageUuidService} from '../../services/page.uuid.service';
-import {Subscription} from 'rxjs';
+import {PageName} from '../../models/page-name.enum';
 
 
 @Component({
@@ -16,14 +13,13 @@ import {Subscription} from 'rxjs';
   templateUrl: './message.component.html',
   styleUrls: ['./message.component.css']
 })
-export class MessageComponent implements OnInit, OnDestroy{
+export class MessageComponent implements OnInit{
   @Output()
   public saveMessage: EventEmitter<Message> = new EventEmitter<Message>();
 
   @Input()
   message: Message | undefined;
 
-  private sub = new Subscription();
   public form!: FormGroup;
   public messageProperty = MessageProperty;
 
@@ -31,17 +27,7 @@ export class MessageComponent implements OnInit, OnDestroy{
     private formBuilder: FormBuilder,
     private router: Router,
     private pageService: PageService,
-    private pageUuidService: PageUuidService
   ) { }
-
-  // tslint:disable-next-line:typedef
-  public getPage(){
-    return 'contact';
-  }
-  // tslint:disable-next-line:typedef
-  public getEnter(){
-    return 'enter';
-  }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -50,20 +36,13 @@ export class MessageComponent implements OnInit, OnDestroy{
       [MessageProperty.email]: [this.message?.[MessageProperty.email] || ''],
       [MessageProperty.note]: [this.message?.[MessageProperty.note] || '']
     });
-    this.savePage({
-      [PageProperty.uuid]: this.pageUuidService.getDeviceId(),
-      [PageProperty.page]: this.getPage(),
-      [PageProperty.enterexit]: this.getEnter()
-    });
-    this.sub = new Subscription();
+    this.enterPage();
   }
 
   public submit(): void {
-    console.log(123);
     if (!this.form.valid) {
       return;
     }
-    console.log(123);
     this.saveMessage.emit(this.form.value);
     this.resetForm();
   }
@@ -72,15 +51,15 @@ export class MessageComponent implements OnInit, OnDestroy{
     this.form.reset();
   }
 
-  savePage(page: Page): void {
-    this.pageService.enter(page).subscribe(() => {
-      this.router.navigate([Route.MESSAGES]);
+  private enterPage(): void {
+    this.pageService.enter(PageName.contact).subscribe(() => {
+      this.navigateMessages();
     });
   }
-  ngOnDestroy(): void{
-    this.sub.unsubscribe();
-  }
 
+  private navigateMessages(): void {
+    this.router.navigate([Route.MESSAGES]);
+  }
 }
 
 

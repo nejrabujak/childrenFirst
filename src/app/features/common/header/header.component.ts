@@ -7,7 +7,6 @@ import {Route} from '../../../constants/route.constants';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
+
   public route = Route;
-
 }
-

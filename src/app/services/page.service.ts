@@ -15,8 +15,7 @@ export class PageService {
   constructor(
     private http: HttpClient,
     private pageUuidService: PageUuidService,
-  ) {
-  }
+  ) { }
 
   public enter(pageName: string): Observable<Page> {
     return this.postPage(pageName, PageEnterExit.enter);
@@ -34,5 +33,4 @@ export class PageService {
     };
     return this.http.post<Page>(`${this.baseUrl}/page`, page);
   }
-
 }

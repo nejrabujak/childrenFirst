@@ -1,4 +1,4 @@
-import {MessageProperty} from './MessageProperty';
+import {MessageProperty} from './message-property.enum';
 
 export class Message {
   [MessageProperty.id]?: string;
