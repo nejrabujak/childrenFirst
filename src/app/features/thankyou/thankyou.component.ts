@@ -8,5 +8,5 @@ import {Route} from '../../constants/route.constants';
 })
 export class ThankyouComponent {
 
-  public route = Route;
+  public route = Route; // todo: use it in html
 }

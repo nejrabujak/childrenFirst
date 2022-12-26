@@ -13,6 +13,8 @@ import {CardName} from '../../models/card-name.enum';
 })
 export class TipsComponent implements OnInit{
 
+  public cardName = CardName;
+
   constructor(
     private router: Router,
     private pageService: PageService,
@@ -23,14 +25,14 @@ export class TipsComponent implements OnInit{
     this.enterPage();
   }
 
-  tip1(): void {
-    this.cardService.enter(PageName.tips, CardName.tip1).subscribe(() => {
+  tipEnter(cardName: CardName): void {
+    this.cardService.enter(PageName.tips, cardName).subscribe(() => {
       this.navigateTips();
     });
   }
 
-  tip1exit(): void {
-    this.cardService.exit(PageName.tips, CardName.tip1).subscribe(() => {
+  tipExit(cardName: CardName): void {
+    this.cardService.exit(PageName.tips, cardName).subscribe(() => {
       this.navigateTips();
     });
   }

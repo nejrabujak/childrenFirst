@@ -5,7 +5,7 @@ import {Observable} from 'rxjs';
 import {environment} from '../../environments/environment';
 import {PageProperty} from '../models/page-property.enum';
 import {PageEnterExit} from '../models/page-enter-exit.enum';
-import {PageUuidService} from './page.uuid.service';
+import {PageUuidService} from './page-uuid.service';
 
 @Injectable()
 export class PageService {

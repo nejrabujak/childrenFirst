@@ -6,7 +6,7 @@ import {MessageService} from '../services/message.service';
 import {Route} from '../constants/route.constants';
 
 
-@Injectable()
+@Injectable() // todo: remove unused AND other unused files
 export class MessageResolver implements Resolve<Message> {
 
   constructor(private messageService: MessageService) { }

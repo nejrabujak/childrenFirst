@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './features/common/about/about.component';
 import { ChildrenComponent } from './features/children/children.component';
-import {DialogBubblesComponent} from './features/exercises/dialog/dialogBubbles/dialogBubbles.component';
+import {DialogBubblesComponent} from './features/exercises/dialog/dialogBubbles/dialog-bubbles.component';
 import { DialogDrawComponent } from './features/exercises/dialog/dialogDraw/dialogDraw.component';
 import { DialogEmotionComponent } from './features/exercises/dialog/dialogEmotion/dialogEmotion.component';
 import { DialogMemoryComponent } from './features/exercises/dialog/dialogMemory/dialogMemory.component';
@@ -34,7 +34,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 import { CardService } from './services/card.service';
 import { MessageService } from './services/message.service';
 import { PageService } from './services/page.service';
-import {PageUuidService} from './services/page.uuid.service';
+import {PageUuidService} from './services/page-uuid.service';
 
 @NgModule({
   declarations: [

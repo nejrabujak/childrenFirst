@@ -4,7 +4,7 @@ import {DialogDrawComponent} from './dialog/dialogDraw/dialogDraw.component';
 import {DialogEmotionComponent} from './dialog/dialogEmotion/dialogEmotion.component';
 import {DialogMemoryComponent} from './dialog/dialogMemory/dialogMemory.component';
 import {DialogToysComponent} from './dialog/dialogToys/dialogToys.component';
-import {DialogBubblesComponent} from './dialog/dialogBubbles/dialogBubbles.component';
+import {DialogBubblesComponent} from './dialog/dialogBubbles/dialog-bubbles.component';
 import {DialogSwim1Component} from './dialog/dialogSwim1/dialogSwim1.component';
 import {DialogSwim2Component} from './dialog/dialogSwim2/dialogSwim2.component';
 import {DialogSwim3Component} from './dialog/dialogSwim3/dialogSwim3.component';
@@ -22,6 +22,10 @@ import {PageName} from '../../models/page-name.enum';
 })
 export class ExercisesComponent implements OnInit{
 
+  public dialogDrawComponent = DialogDrawComponent;
+  public dialogEmotionComponent = DialogEmotionComponent;
+  public dialogMemoryComponent = DialogMemoryComponent;
+
   constructor(
     public dialog: MatDialog,
     private router: Router,
@@ -32,8 +36,8 @@ export class ExercisesComponent implements OnInit{
     this.enterPage();
   }
 
-  showDialogDraw(): void {
-    const dialogRef = this.dialog.open(DialogDrawComponent, {
+  showDialog(dialog: any): void {
+    const dialogRef = this.dialog.open(dialog, {
       width: '800px',
       height: '500px'
     });

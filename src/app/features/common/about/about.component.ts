@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import {PageService} from '../../../services/page.service';
 import {PageName} from '../../../models/page-name.enum';
 import {Route} from '../../../constants/route.constants';
+import {BaseComponent} from '../base/base.component';
 
 
 @Component({
@@ -10,24 +11,22 @@ import {Route} from '../../../constants/route.constants';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit{
+export class AboutComponent extends BaseComponent {
 
   constructor(
     private router: Router,
     private pageService: PageService,
-  ) { }
-
-  ngOnInit(): void {
-    this.enterPage();
+  ) {
+    super();
   }
 
-  private enterPage(): void {
+  protected enterPage(): void {
     this.pageService.enter(PageName.about).subscribe(() => {
-      this.navigateAbout();
+      this.navigatePage();
     });
   }
 
-  private navigateAbout(): void {
+  protected navigatePage(): void {
     this.router.navigate([Route.ABOUT]);
   }
 }

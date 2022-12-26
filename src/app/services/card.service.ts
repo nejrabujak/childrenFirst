@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {environment} from '../../environments/environment';
-import {PageUuidService} from './page.uuid.service';
+import {PageUuidService} from './page-uuid.service';
 import {PageEnterExit} from '../models/page-enter-exit.enum';
 import {Card} from '../models/card.model';
 import {CardProperty} from '../models/card-property.enum';

@@ -6,10 +6,11 @@ import {PageName} from '../../../../models/page-name.enum';
 import {CardName} from '../../../../models/card-name.enum';
 
 @Component({
-  selector: 'app-dialog',
-  templateUrl: './dialogBubbles.component.html',
-  styleUrls: ['./dialogBubbles.component.css']
+  selector: 'app-dialog', // todo: in this and in other dialog components, rename selectors
+  templateUrl: './dialog-bubbles.component.html',
+  styleUrls: ['./dialog-bubbles.component.css']
 })
+// todo: as this class filename was renamed, please rename also other dialog components
 export class DialogBubblesComponent implements OnInit {
 
   constructor(

@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {UUID} from 'angular2-uuid';
 
 @Injectable()
-export class PageUuidService{
+export class PageUuidService {
 
   public uuidValue: string;
 

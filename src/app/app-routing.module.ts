@@ -12,6 +12,7 @@ import {ThankyouComponent} from './features/thankyou/thankyou.component';
 
 const routes: Routes = [
 
+  // todo: refactor all paths to take value from enums
   { path: 'about', component: AboutComponent },
   {
     path: Route.MESSAGES,

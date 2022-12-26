@@ -16,7 +16,7 @@ import {PageName} from '../../models/page-name.enum';
 export class MessageComponent implements OnInit{
   @Output()
   public saveMessage: EventEmitter<Message> = new EventEmitter<Message>();
-
+// todo: remove saveMessage completely, and remove decorators @Input/@Output
   @Input()
   message: Message | undefined;
 
@@ -43,7 +43,7 @@ export class MessageComponent implements OnInit{
     if (!this.form.valid) {
       return;
     }
-    this.saveMessage.emit(this.form.value);
+    this.saveMessage.emit(this.form.value); // todo: call handleSaveMessage here
     this.resetForm();
   }
 
@@ -60,6 +60,8 @@ export class MessageComponent implements OnInit{
   private navigateMessages(): void {
     this.router.navigate([Route.MESSAGES]);
   }
+
+  // todo: move handleSaveMessage from container component here
 }
 
 
