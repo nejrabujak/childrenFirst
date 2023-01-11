@@ -9,5 +9,5 @@ export class Route {
   public static SPORT = 'sport';
   public static MESSAGES = 'messages';
   public static SWIM = 'swim';
-
+  public static THANKYOU = 'thankyou';
 }

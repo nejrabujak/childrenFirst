@@ -1,5 +1,5 @@
 <header>
-  <div class="hero">
+  <div class="header-all">
     <nav>
       <div class="logo">
       <img src="https://i.imgur.com/PkpcThl.jpg" class="logoimg" alt="LogoImg">
@@ -12,16 +12,15 @@
       </div>
       <div>
       <ul>
-        <li><a routerLink="" routerLinkActive="active"><span itemprop="name">Početna</span></a></li>
-        <li><a routerLink="/children" routerLinkActive="active"><span itemprop="name">O djeci</span></a></li>
-        <li><a routerLink="/tips" routerLinkActive="active"><span itemprop="name">Savjeti</span></a></li>
-        <li><a routerLink="/exercises" routerLinkActive="active"><span itemprop="name">Vježbe</span></a></li>
-        <li><a routerLink="/sport" routerLinkActive="active"><span itemprop="name">Sport</span></a></li>
-        <li><a routerLink="/about" routerLinkActive="active"><span itemprop="name">O meni</span></a></li>
+        <li><a [routerLink]="[route.EMPTY]"><span itemprop="name">Početna</span></a></li>
+        <li><a [routerLink]="[route.CHILDREN]"><span itemprop="name">O djeci</span></a></li>
+        <li><a [routerLink]="[route.TIPS]"><span itemprop="name">Savjeti</span></a></li>
+        <li><a [routerLink]="[route.EXERCISES]"><span itemprop="name">Vježbe</span></a></li>
+        <li><a [routerLink]="[route.SPORT]"><span itemprop="name">Sport</span></a></li>
+        <li><a [routerLink]="[route.ABOUT]"><span itemprop="name">O meni</span></a></li>
         <li><a [routerLink]="[route.MESSAGES]"><span itemprop="name">Kontakt</span></a></li>
       </ul>
       </div>
     </nav>
   </div>
 </header>
-<router-outlet></router-outlet>

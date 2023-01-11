@@ -1,0 +1,19 @@
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<youtube-player [videoId]="videoId"
+                [height]="250"
+                [width]="500"
+                suggestedQuality="hd720"
+                class="video"> </youtube-player>
+<mat-dialog-content class="text">
+  <p> Kada su djeca savladala prethodnu vježbu, možete im dati nešto malo komplikovanije a to je da uključe i rad rukama.
+    Na početku izvođenja ove vjezbe, djeci svežite špageticu oko struka i pomažite im da rade rukama naprijed. Rukama bi
+    trebali da izvode oblik srca tako da je glava iznad vode. Kada nauče, raditi rukama bez vaše pomoći, možete im
+    skinuti špageticu i pomoći da rade rukama. Kada budu spremni, moći će samostalno da se održavaju i plivaju sami na
+    ovaj način. Cijelo vrijeme dok uče raditi rukama, obavezno je i da rade nogama kao u prethodnoj vježbi.
+  </p>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-raised-button [mat-dialog-close]="true" (click)="exitDialog()" color="primary">Zatvori</button>
+</mat-dialog-actions>

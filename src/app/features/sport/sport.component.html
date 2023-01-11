@@ -4,7 +4,7 @@
     <div id="section-body">
     <div class="row">
       <div class="column ">
-        <div class="card swimming" (mouseenter)="swim()" (mouseleave)="swimExit()">
+        <div class="card swimming" (mouseenter)="sportEnter(cardName.swim)" (mouseleave)="sportExit(cardName.swim)">
           <img src="https://i.imgur.com/Qm0aCm0.jpg" alt="swim">
           <p class="text"> Plivanje, osim što doprinosi zdravlju i razvoju psihomotoričkih vještina,
             ono je posrednik i u socijalizaciji. Plivački klub “Spid” je prvi i jedini plivački klub za
@@ -18,7 +18,7 @@
       </div>
 
       <div class="column">
-        <div class="card skiing" (mouseenter)="skiing()" (mouseleave)="skiingExit()">
+        <div class="card skiing" (mouseenter)="sportEnter(cardName.skiing)" (mouseleave)="sportExit(cardName.skiing)">
           <img src="https://i.imgur.com/cdAn8hB.jpg" alt="ski">
           <p class="text"> Plivački klub “Spid” osim što se bavi školom plivanja, u zimskom periodu kada su djeca
             na raspustu, organizuje i školu skijanja za djecu sa različitim poteškoćama i invaliditetima. Vješti
@@ -31,7 +31,7 @@
 
     <div class="row">
       <div class="column">
-        <div class="card football" (mouseenter)="football()" (mouseleave)="footballExit()">
+        <div class="card football" (mouseenter)="sportEnter(cardName.football)" (mouseleave)="sportExit(cardName.football)">
           <img src="https://i.imgur.com/WqkOVlY.jpg" alt="football">
           <p class="text"> Fudbalski klub "Respekt" je prva i jedina organizacija ovog tipa u svijetu, koja je besplatna za svu djecu
             i mlade, i u kojoj, rame uz rame, na treningu i na takmičenjima, uz tipičnu djecu, treniraju djeca sa
@@ -44,7 +44,7 @@
       </div>
 
       <div class="column">
-        <div class="card athletics" (mouseenter)="athletics()" (mouseleave)="athleticsExit()">
+        <div class="card athletics" (mouseenter)="sportEnter(cardName.athletics)" (mouseleave)="sportExit(cardName.athletics)">
           <img src="https://i.imgur.com/Ut8E0VY.jpg" alt="athletics">
           <p class="text">Još jedan od sportova kojim se vaše dijete može baviti je atletika. Atletski klub osoba sa
             invaliditetom "Novi Grad Sarajevo" je jedan od tih klubova. Oni podržavaju  i nastoje razviti atletiku kao
@@ -57,7 +57,7 @@
 
       <div class="row">
         <div class="column ">
-          <div class="card gymnastics" (mouseenter)="gymnastics()" (mouseleave)="gymnasticsExit()">
+          <div class="card gymnastics" (mouseenter)="sportEnter(cardName.gymnastics)" (mouseleave)="sportExit(cardName.gymnastics)">
             <img src="https://i.imgur.com/3vs6oNA.jpg" alt="gymnastics">
             <p class="text">Jedan od klubova u Bosni i Hercegovini koji je uspješan i predan u svom radu je Klub ritmičke
               gimnastike "Visoko". Oni nude djeci pozitivno okruženje i gimnastičke treninge za savladanje novih vještina.
@@ -68,7 +68,7 @@
         </div>
 
         <div class="column">
-          <div class="card voleyball" (mouseenter)="volleyball()" (mouseleave)="volleyballExit()">
+          <div class="card voleyball" (mouseenter)="sportEnter(cardName.volleyball)" (mouseleave)="sportExit(cardName.volleyball)">
             <img src="https://i.imgur.com/1u1g5Tq.jpg" alt="volleball">
             <p class="text">Još jedan spori kojim se Vaše dijete može baviti je odbojka. Klub sjedeće odbojke "Bosna", Zenica, je
               klub koji za cilj ima resocijalizaciju  invalida putem sporta te popularizacijeu moralnih vrijednosti koje

@@ -1,0 +1,20 @@
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<youtube-player [height]="250"
+                [videoId]="videoId"
+                [width]="500"
+                class="video"
+                suggestedQuality="hd720">
+</youtube-player>
+<mat-dialog-content class="text">
+  <p> Nakon savladane prethodne vježbve, slijedi nešto teža vježba. Dok dijete leži na leđima i radi nogama,
+    pokažite mu da treba raditi i rukama. Taj zaveslaj se izvodi pravom rukom u kružnom pokretu prema nazad. Ispravno je da
+    uradi jedan zaveslaj jednom rukom pa napravi pauzu. Postoji nekoliko varijacija ove vježbe. Može se prvo izvoditi
+    samo densnom rukom pa zatim samo lijevom, mogu se zaveslaji izvoditi naizmjenično ili 3 do 5 zaveslaja jednom rukom
+    pa zatim isti broj zaveslaja drugom rukom.
+  </p>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-raised-button [mat-dialog-close]="true" (click)="exitDialog()" color="primary">Zatvori</button>
+</mat-dialog-actions>
