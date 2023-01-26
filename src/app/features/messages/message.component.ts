@@ -18,6 +18,7 @@ import {MessageService} from '../../services/message.service';
 export class MessageComponent extends BaseComponent implements OnInit{
 
   message: Message | undefined;
+  public route = Route;
 
   public form!: FormGroup;
   public messageProperty = MessageProperty;

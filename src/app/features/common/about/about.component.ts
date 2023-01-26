@@ -11,7 +11,7 @@ import {BaseComponent} from '../base/base.component';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent extends BaseComponent{
+export class AboutComponent extends BaseComponent {
 
   constructor(
     private router: Router,

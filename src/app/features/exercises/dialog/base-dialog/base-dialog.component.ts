@@ -1,13 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {CardService} from '../../../../services/card.service';
 import {Router} from '@angular/router';
-import {Route} from '../../../../constants/route.constants';
-import {PageName} from '../../../../models/page-name.enum';
 import {CardName} from '../../../../models/card-name.enum';
-
+import {PageName} from '../../../../models/page-name.enum';
+import {Route} from '../../../../constants/route.constants';
 @Component({
   template: ''
 })
+
 export abstract class BaseDialogComponent implements OnInit {
 
   protected constructor(

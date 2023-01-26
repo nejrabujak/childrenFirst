@@ -41,7 +41,7 @@ const routes: Routes = [
     component: SportComponent
   },
   {
-    path: Route.THANKYOU,
+    path: Route.MESSAGES + Route.SEPARATOR + Route.THANKYOU,
     component: ThankYouComponent
   }
 ];
