@@ -18,7 +18,6 @@ import {MessageService} from '../../services/message.service';
 export class MessageComponent extends BaseComponent implements OnInit{
 
   message: Message | undefined;
-  public route = Route;
 
   public form!: FormGroup;
   public messageProperty = MessageProperty;
@@ -67,7 +66,7 @@ export class MessageComponent extends BaseComponent implements OnInit{
 
   handleSaveMessage(message: Message): void {
     this.messageService.create(message).subscribe(() => {
-      this.router.navigate([Route.MESSAGES]);
+      this.router.navigate([Route.MESSAGES, Route.THANKYOU]);
     });
   }
 }
