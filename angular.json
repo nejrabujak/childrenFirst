@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "childrenFirst": {
+    "children-first": {
       "projectType": "application",
       "schematics": {},
       "root": "",
