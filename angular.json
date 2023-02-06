@@ -3,9 +3,12 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "childrenFirst": {
+    "application": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
