@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  backendUrl: 'https://children-first.herokuapp.com',
+  backendUrl: 'https://children-first.herokuapp.com/',
 
 };
