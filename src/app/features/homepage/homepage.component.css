@@ -40,17 +40,24 @@ a{
 
 @media (max-width: 600px) {
   .row{
-    display: flex;
-    flex-direction: column;
+    float: none;
+    display: block;
   }
   .column2, .column {
     display: block;
     align-items: center;
     justify-content: center;
+    text-align: center;
     float: none;
-    width: 100%;
     padding: 10px;
-    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  img{
+    text-align: center;
+  }
+  .column3{
+    padding: 30px;
   }
 
 }

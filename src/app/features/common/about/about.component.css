@@ -49,6 +49,26 @@ img{
   width: 215px;
   margin-bottom:25px;
 }
+.waviy {
+  position: relative;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #3c5148;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+.word{
+  padding-right: 15px;
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg)
+  }
+}
 
 @media (max-width: 600px) {
   .section-title{

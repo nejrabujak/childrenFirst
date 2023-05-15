@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "application": {
+    "children-first": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "childrenFirst:build"
+            "browserTarget": "children-first:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "childrenFirst:build:production"
+              "browserTarget": "children-first:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "childrenFirst:build"
+            "browserTarget": "children-first:build"
           }
         },
         "test": {
@@ -110,16 +110,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "childrenFirst:serve"
+            "devServerTarget": "children-first:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "childrenFirst:serve:production"
+              "devServerTarget": "children-first:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "childrenFirst"
+  "defaultProject": "children-first"
 }

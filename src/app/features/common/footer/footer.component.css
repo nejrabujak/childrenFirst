@@ -13,13 +13,16 @@ hr{
   height:1px;
 }
 
-footer {
+.footer {
   text-align: center;
   background-color:	#8BCA67;
   width: 100%;
   padding-bottom:30px;
   padding-top: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: block;
+  justify-content: center;
+  align-items: center;
 }
 
 ul {
@@ -29,11 +32,13 @@ li {
   padding-top:10px;
   letter-spacing:2px;
 }
+
 .footertext{
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   font-size:15px;
+  text-align: center;
 }
 
 .title{
@@ -44,13 +49,25 @@ li {
   align-items: center;
   font-size:24px;
   letter-spacing:5px;
+  text-align: center;
 }
 
 .footerIcons{
   font-size:30px;
   margin-top:20px;
+  text-align: center;
+
 }
 
 a{
   margin-left:20px;
+}
+.fa-facebook{
+  margin-left: 0;
+}
+
+@media (max-width: 600px) {
+  .footer{
+    width: 100%;
+  }
 }

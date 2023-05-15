@@ -1,6 +1,6 @@
 
 <section class="section">
-  <h2 class="section-title">Igre i vježbe</h2>
+  <h2 class="section-title title-word title-word-1">Igre i vježbe</h2>
   <p class="text">Igre i aktivnosti ne samo da pomažu da se vaša djeca angažiraju, već ih i podstiču da budu spontana i uživaju.
     Ovdje navedene igre i  fizičke vježbe su pogodne za svu djecu bez obzira na njihove fizičke ili intelektualne poteškoće.
     Igre su posebno pogodne za djecu s poteškoćama iz autističnog spektra, poteškoćama u učenju, kašnjenjem u govoru i
@@ -8,7 +8,9 @@
     u vodi može smiriti i umiriti živce vašeg djeteta. Sljedećih nekoliko vježbi se odnosi i na vježbe u vodi a koje mogu
     raditi sva djeca bilo kog uzrasta. Sa ovim vježbama djeci će biti interesantno a istovremeno će učiti i samostalno da plivaju.
   </p>
-<div class="column">
+  <div class="row">
+    <p class="text1 title-word title-word-1">IGRE</p>
+    <div class="column">
   <div class="about__container" (click)="showDialog(dialogDrawComponent)">
     <p class="about__text">Crtanje</p>
   </div><br>
@@ -18,7 +20,12 @@
   <div class="about__container" (click)="showDialog(dialogEmotionComponent)">
   <p class="about__text">Sortiranje emocija</p>
   </div><br>
-  <div class="about__container" (click)="showDialog(dialogBubblesComponent)">
+  </div>
+  </div>
+    <div class="row">
+      <p class="text1 text2 title-word title-word-1">VJEŽBE</p>
+      <div class="column">
+      <div class="about__container" (click)="showDialog(dialogBubblesComponent)">
   <p class="about__text">Puhanje balončića</p>
   </div><br>
   <div class="about__container" (click)="showDialog(dialogToysComponent)">
@@ -36,5 +43,6 @@
   <div class="about__container" (click)="showDialog(dialogSwim4Component)">
   <p class="about__text">Plivanje na leđima 2</p><br>
   </div>
+      </div>
 </div>
 </section>

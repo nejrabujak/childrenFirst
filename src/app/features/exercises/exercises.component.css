@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Times New Roman", Times, serif;
 }
+.row {
+  padding: 20px;
+}
 .section{
   background: #FFFDE7;
   padding-top: 3rem;
@@ -13,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 27px;
+  font-size: 30px;
   color: #3c5148;
   margin-top: 10px;
   margin-bottom: 40px;
@@ -27,11 +30,59 @@
   margin-bottom: 30px;
   font-size: 19px;
 }
-.column{
-  display: block;
-  align-items: center;
+.text1{
   justify-content: center;
+  text-align: center;
+  font-size: 27px;
+  padding: 5px 100px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #3c5148;
 }
+text2{
+  margin-top: 40px;
+}
+.waviy {
+  position: relative;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #3c5148;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg)
+  }
+}
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #8BCA67;
+}
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+.column{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .about__container{
   border-radius: 20px;
   text-align: center;
@@ -60,7 +111,15 @@
     padding: 20px 40px;
     text-align: justify;
   }
-
+  .column {
+    float: none;
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 
