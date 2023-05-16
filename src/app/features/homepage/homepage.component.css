@@ -55,9 +55,12 @@ a{
   }
   img{
     text-align: center;
+    width: 100%;
   }
   .column3{
     padding: 30px;
   }
-
+.section{
+  width: 100%;
+}
 }
